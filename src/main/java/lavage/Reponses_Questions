@@ -1,8 +1,8 @@
 Question 1 :
 Il n'y a pas d'incohérence. La pile augmente bien, il y a le bon nombre d'assiette ni de doublons d'assiette.
 Cependant il n'y a pas d'essuyeur.
-La classe Assiette est préservée des incohérences de thread grace au "synchronized(this)"
-qui empêche plusieurs thread d'utiliser le meme objet en même temps.
+La classe Assiette est préservée des incohérences de thread car il n'y a pas d'acces simultanes a la pile d'assiette.
+En effet les laveur prennent un certain temps (different pour chacun) a laver leur assiette.
 
 Question 2 :
 Les deux objets Laveur et Essuyeurs essayent d'acceder à un même objet ce qui provoque des incoherences.

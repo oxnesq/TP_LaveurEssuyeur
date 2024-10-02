@@ -1,0 +1,11 @@
+Question 1 :
+Il n'y a pas d'incohérence. La pile augmente bien, il y a le bon nombre d'assiette ni de doublons d'assiette.
+Cependant il n'y a pas d'essuyeur.
+La classe Assiette est préservée des incohérences de thread grace au "synchronized(this)"
+qui empêche plusieurs thread d'utiliser le meme objet en même temps.
+
+Question 2 :
+Les deux objets Laveur et Essuyeurs essayent d'acceder à un même objet ce qui provoque des incoherences.
+La condition du pop vérife si la pile est vide. L'essuyeur ne pourra donc pas essuyer d'assiette.
+L'essuyeur n'est pas notifié que la pile à été modifier donc il continue d'attendre.
+
